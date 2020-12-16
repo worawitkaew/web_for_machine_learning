@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FLASK CSV File Upload</title>
+  </head>
+  <body>
+    <h1>Upload your CSV file</h1>
+    <form method="POST" action="upload" enctype="multipart/form-data">
+      <p><input type="file" name="file"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+    <form method="POST" action="train" enctype="multipart/form-data">
+        <p><input type="text" name="namefile"></p>
+        <p><input type="submit" value="Submit"></p>
+      </form>
+      <form method="POST" action="test" enctype="multipart/form-data">
+        <p><input type="file" name="testfile"></p>
+        <p><input type="submit" value="Submit"></p>
+      </form>
+      {{ score }}
+      {{ result }}
+    {% for your_list_element in your_list %}
+        <p>{{ your_list_element }} </p>
+    {% endfor %}
+  </body>
+</html>
